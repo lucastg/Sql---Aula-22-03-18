@@ -1,0 +1,21 @@
+create database db_Produto;
+use db_Produto;
+create table produto(codigo int, nome char(30), valor int, data date);
+
+insert into produto(codigo, nome, valor, data) values (01, 'Processador Intel', 800, '2018-03-02');
+insert into produto(codigo, nome, valor, data) values (02, 'Processador AMD', 600, '2018-03-02');
+insert into produto(codigo, nome, valor, data) values (03, 'Placa de Video NVIDIA 1080', 2100, '2018-03-02');
+insert into produto(codigo, nome, valor, data) values (04, 'Placa de Video AMD 570X ', 1200, '2018-03-30');
+insert into produto(codigo, nome, valor, data) values (04, 'Revorvi', 600, '2018-03-02');
+
+alter table produto
+add lote int;
+
+ update produto
+ set lote = 05 where codigo = 5;
+
+alter table produto
+drop column data;
+
+
+select * from produto;
